@@ -1,5 +1,5 @@
 export const createCompletion = async (messages) => {
-    const ApiUrl = import.meta.env.VITE_CHATBOT_API_URL
+    const ApiUrl = process.env.NEXT_PUBLIC_VITE_CHATBOT_API_URL;
 
     const body = {
         model: "meta-llama/Meta-Llama-3-8B-Instruct",
@@ -31,14 +31,13 @@ export const createCompletion = async (messages) => {
     return text;
 }
 
-
 export const DefaultChatMessages = [
     {
-        "content": import.meta.env.VITE_CHATBOT_FIRST_QUESTION,
+        "content": process.env.NEXT_PUBLIC_VITE_CHATBOT_FIRST_QUESTION,
         "role": 'user'
     },
     {
-        "content": import.meta.env.VITE_CHATBOT_FIRST_ANSWER,
+        "content": process.env.NEXT_PUBLIC_VITE_CHATBOT_FIRST_ANSWER,
         "role": 'assistant'
     }
 ];
@@ -46,9 +45,9 @@ export const DefaultChatMessages = [
 const ChatbotSetup = [
     {
         "role": "system",
-        "content": import.meta.env.VITE_CHATBOT_INSTRUCTIONS
+        "content": process.env.NEXT_PUBLIC_VITE_CHATBOT_INSTRUCTIONS
     }
-]
+];
 
 // Format the response from the chatbot
 function formatChatbotResponse(response) {
