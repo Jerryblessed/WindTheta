@@ -1,5 +1,7 @@
 - Wind Theta
-  
+-
+-[Try it](https://wind-theta-6w487pakx-jerryblesseds-projects.vercel.app/)
+-
 - Use chatbot for assistance in video 🤖
 - Simple User interface 💻
 - Get 3D feel of video object by theta cloudEdge 🌐
